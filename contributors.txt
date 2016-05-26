@@ -1,0 +1,6 @@
+Lance Chisholm
+Shaun Cullen
+Eric Den Haan
+Joshua Vandenhoek
+
+git tutorial: http://rogerdudler.github.io/git-guide/

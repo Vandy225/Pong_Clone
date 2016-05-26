@@ -1,0 +1,74 @@
+// CPSC 2720
+// Group Project
+// Test List
+
+Audio Class Tests:
+
+INPUT	  	     	EXPECTED OUTPUT		DESCRIPTION
+--------------------------------------------------------------------------------
+Sample Load 
+Test
+
+al_load_sample:
+music.wav		!=NULL			Audio samples all load correctly
+wall_hit.wav		!=NULL
+paddle_hit.wav		!=NULL
+score.wav		!=NULL
+
+Ball Class Tests:
+
+INPUT	  	     	EXPECTED OUTPUT		DESCRIPTION
+--------------------------------------------------------------------------------
+Horizontal Collision	getBallSpeed(-150,0)	horizontal collision check.
+Test
+
+Ball(400, 300, 20, V)
+vector V = (150, 0)
+
+PlayerPaddle
+(20, 100, 399, 300)
+
+
+INPUT	  	     	EXPECTED OUTPUT		DESCRIPTION
+--------------------------------------------------------------------------------
+top-Vertical Collision  Ball Vector changes     Ball changes direction properly 
+	    		properly.   		when in the proper placement
+PlayerPaddle(20.0,100.0,400,300.0,..., ...);	for a collision to occur.
+Ball(400,231.0,20.0, Vector(0,10));
+
+INPUT	  	     	EXPECTED OUTPUT		DESCRIPTION
+--------------------------------------------------------------------------------
+bottom-collision	Ball Vector changes	Ball should change direction.
+			properly.	
+
+PlayerPaddle(20.0,100.0,400,300.0,..,..);
+Ball(400,369.0,20.0, Vector(0,-10));
+
+INPUT	  	     	EXPECTED OUTPUT		DESCRIPTION
+--------------------------------------------------------------------------------
+test move		The Ball changes	Ball hitting top and bottom,
+     			direction when hitting	should change direction.
+			top and bottom of
+			screen.
+			
+Ball(400,-5,20,Vector(0,1))
+Ball(400,605,20,Vector(0,-1))
+
+
+INPUT	  	     	EXPECTED OUTPUT		DESCRIPTION
+--------------------------------------------------------------------------------
+test Score              Score == 20 & 0		Score should update properly,
+     			      	      		depending on the max score.
+score s;
+s.setmax = 20
+s.scoreUp(); x20
+s.getscore() == 20.
+s.resetScore();
+s.getscore() == 0.
+
+INPUT	  	     	EXPECTED OUTPUT		DESCRIPTION
+--------------------------------------------------------------------------------
+testResetBall		Ball should reset to	After Scoring the ball should reset
+			Point(400,300)	  	to the starting position. 
+Ball(605,400,20,
+   Vector(10,0));
